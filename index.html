@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revueltos en IA</title>
+<style>
+body { font-family: Arial; margin: 20px; }
+textarea, input { width: 100%; margin: 5px 0; padding: 5px; }
+button { margin: 5px 0; padding: 5px 10px; cursor: pointer; }
+#resultado { margin-top: 20px; white-space: pre-wrap; background: #f0f0f0; padding: 10px; border-radius: 5px; }
+h1 { color: #333; }
+label { font-weight: bold; margin-top: 10px; display: block; }
+</style>
+</head>
+<body>
+
+<h1>Revueltos en IA</h1>
+
+<label>Buscar (Gemini):</label>
+<input type="text" id="searchQuery" placeholder="Escribe tu consulta">
+<button onclick="buscar()">Buscar</button>
+
+<label>Interpelación Gemini:</label>
+<textarea id="interpelateText" placeholder="Discurso del delegado"></textarea>
+<button onclick="interpelateGemini()">Interpelar con Gemini</button>
+
+<label>Corrección de discursos (Deepsek):</label>
+<textarea id="speechText" placeholder="Discurso a corregir"></textarea>
+<button onclick="correctSpeech()">Corregir discurso</button>
+
+<label>Desglose de tópicos (Deepsek):</label>
+<input type="text" id="topicText" placeholder="Tema">
+<button onclick="topicBreakdown()">Desglosar tópico</button>
+
+<label>Corrección de documentos de posición (Deepsek):</label>
+<textarea id="positionText" placeholder="Documento de posición"></textarea>
+<button onclick="correctPosition()">Corregir documento</button>
+
+<div id="resultado">Resultados aparecerán aquí...</div>
+
+<script src="main.js"></script>
+</body>
+</html>
